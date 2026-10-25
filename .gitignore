@@ -1,7 +1,7 @@
 # Python environments (large, machine specific)
 .venv/
 .venv*/
-
+.venv_other_pc/
 # Camera photos and runtime output (people, number plates)
 aiot_project/snapshots/
 violations.db
@@ -34,3 +34,4 @@ desktop.ini
 .claude/
 
 # NOT ignored on purpose: model weights (runs/, *.pt) and the dataset class-name files
+aiot_project/.git_backup/

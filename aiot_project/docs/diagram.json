@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -358.2, "left": -400.4, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -96, "left": -302.36, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -315.3, "left": 5.5, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic2", "top": -468.9, "left": 5.5, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -524, "left": -362.58, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir2", "top": -524, "left": -506.58, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": -91.8, "left": 0.1, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -420,
+      "left": -603,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -418.45,
+      "left": -96,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -408.85,
+      "left": -211.2,
+      "attrs": { "value": "2000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -120.85,
+      "left": -201.6,
+      "attrs": { "value": "2000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -159.25,
+      "left": -19.2,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "bb1:tn.1", "black", [ "h-153.45", "v-374.4" ] ],
+    [ "ultrasonic2:GND", "bb1:tn.24", "black", [ "v9.6", "h-193.2" ] ],
+    [ "ultrasonic2:ECHO", "r1:2", "purple", [ "v28.8", "h-116", "v-67.2" ] ],
+    [ "r1:1", "bb1:26t.b", "purple", [ "v0", "h-38.4" ] ],
+    [ "esp:17", "bb1:26t.e", "purple", [ "h105.6", "v-278.4" ] ],
+    [ "r2:2", "bb1:26t.c", "green", [ "h27.6", "v115.2" ] ],
+    [ "r2:1", "bb1:tn.13", "black", [ "v0" ] ],
+    [ "esp:GND.1", "bb1:bn.1", "black", [ "h0" ] ],
+    [ "esp:19", "bb1:30b.j", "purple", [ "h0" ] ],
+    [ "ultrasonic1:ECHO", "r4:2", "purple", [ "v0" ] ],
+    [ "r4:1", "bb1:30b.i", "purple", [ "v0", "h-48", "v-57.6" ] ],
+    [ "bb1:30b.h", "r3:2", "green", [ "h-9.6", "v105.6" ] ],
+    [ "r3:1", "bb1:bn.15", "black", [ "h-9.6", "v-46.7" ] ],
+    [ "esp:5V", "bb1:bp.1", "red", [ "h-134.25", "v-259.2" ] ],
+    [ "esp:3V3", "bb1:tp.1", "red", [ "h-182.25", "v-278.4", "h134.4" ] ],
+    [ "ultrasonic1:GND", "bb1:bn.25", "black", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "bb1:bp.25", "red", [ "v0" ] ],
+    [ "ultrasonic2:VCC", "bb1:bp.24", "red", [ "v38.4", "h-96", "v144" ] ],
+    [ "pir2:VCC", "bb1:tp.2", "red", [ "v67.2", "h134.4" ] ],
+    [ "pir1:VCC", "bb1:tp.3", "red", [ "v0" ] ],
+    [ "pir2:GND", "bb1:tn.2", "black", [ "v57.6", "h105.34" ] ],
+    [ "pir1:GND", "bb1:tn.5", "black", [ "v0" ] ],
+    [ "pir2:OUT", "bb1:1t.a", "violet", [ "v38.4", "h95.86" ] ],
+    [ "pir1:OUT", "bb1:2t.a", "violet", [ "v38.4", "h-28.94" ] ],
+    [ "esp:26", "bb1:1t.c", "violet", [ "h0" ] ],
+    [ "esp:25", "bb1:2t.c", "violet", [ "v0", "h-38.25" ] ],
+    [ "rtc1:5V", "bb1:bp.21", "red", [ "h0" ] ],
+    [ "rtc1:GND", "bb1:bn.14", "black", [ "h0" ] ],
+    [ "esp:21", "rtc1:SDA", "green", [ "h38.4", "v-48" ] ],
+    [ "rtc1:SCL", "esp:22", "blue", [ "h-144", "v19" ] ],
+    [ "bz1:1", "bb1:tn.3", "green", [ "v9.6", "h249.6" ] ],
+    [ "bz1:2", "esp:33", "green", [ "v0" ] ],
+    [ "esp:16", "bb1:24t.e", "cyan", [ "h0" ] ],
+    [ "ultrasonic2:TRIG", "bb1:24t.d", "blue", [ "v48", "h-240.4" ] ],
+    [ "esp:18", "bb1:21b.j", "cyan", [ "h19.2", "v-211.2" ] ],
+    [ "ultrasonic1:TRIG", "bb1:21b.i", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

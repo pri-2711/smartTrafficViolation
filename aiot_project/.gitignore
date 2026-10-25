@@ -1,0 +1,42 @@
+# Camera photos taken by the receiver (can contain people and number plates)
+snapshots/
+
+# Runtime output of the AI pipeline
+violations.db
+violations/
+*.db
+*.sqlite
+
+# Secrets / credentials (keep Wi-Fi details here instead of in the sketches)
+secrets.h
+credentials.h
+*.env
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv*/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Arduino build output
+build/
+*.elf
+*.bin
+*.map
+
+# OS / editor junk
+Thumbs.db
+.DS_Store
+desktop.ini
+.vscode/
+.idea/
+
+# Claude Code local session state
+.claude/
