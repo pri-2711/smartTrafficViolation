@@ -1,0 +1,36 @@
+# Python environments (large, machine specific)
+.venv/
+.venv*/
+
+# Camera photos and runtime output (people, number plates)
+aiot_project/snapshots/
+violations.db
+violations/
+*.db
+*.sqlite
+
+# Secrets / credentials
+secrets.h
+credentials.h
+*.env
+.env
+*.pem
+*.key
+
+# Python / logs / temp
+__pycache__/
+*.pyc
+*.log
+*.tmp
+
+# OS / editor junk
+Thumbs.db
+.DS_Store
+desktop.ini
+.vscode/
+.idea/
+
+# Claude Code local session state
+.claude/
+
+# NOT ignored on purpose: model weights (runs/, *.pt) and the dataset class-name files

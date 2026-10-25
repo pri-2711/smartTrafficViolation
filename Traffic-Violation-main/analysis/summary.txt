@@ -1,0 +1,24 @@
+helmet_plate / Option B
+  epochs run: 50
+  error rate (1 - mAP50): epoch 1 0.310 -> best 0.129 (epoch 46), down 58.4%
+  time per epoch: mean 5.7 min, total 4.78 h
+
+helmet_plate / YOLO26
+  epochs run: 41
+  error rate (1 - mAP50): epoch 1 0.095 -> best 0.041 (epoch 20), down 56.6%
+  time per epoch: mean 4.5 min, total 3.10 h
+
+triple_riding / Option B
+  epochs run: 50
+  error rate (1 - mAP50): epoch 1 0.477 -> best 0.058 (epoch 35), down 87.8%
+  time per epoch: mean 0.9 min, total 0.72 h
+
+triple_riding / YOLO26
+  epochs run: 48
+  error rate (1 - mAP50): epoch 1 0.368 -> best 0.023 (epoch 38), down 93.7%
+  time per epoch: mean 0.4 min, total 0.34 h
+
+test helmet_plate / Option B: mAP50 0.860, mAP50-95 0.570, error rate 0.140, recall@100 0.651
+test helmet_plate / YOLO26: mAP50 0.945, mAP50-95 0.707, error rate 0.055, recall@100 0.757
+test triple_riding / Option B: mAP50 0.953, mAP50-95 0.667, error rate 0.047, recall@100 0.722
+test triple_riding / YOLO26: mAP50 0.963, mAP50-95 0.786, error rate 0.037, recall@100 0.833

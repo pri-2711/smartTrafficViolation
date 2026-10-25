@@ -1,0 +1,15 @@
+{
+  "task": "triple_riding",
+  "best_epoch": 41,
+  "val": {
+    "mAP50": 0.9406,
+    "mAP50_95": 0.6745,
+    "recall_100": 0.7311
+  },
+  "test": {
+    "mAP50": 0.9532,
+    "mAP50_95": 0.6666,
+    "recall_100": 0.7219
+  },
+  "test_images": 165
+}

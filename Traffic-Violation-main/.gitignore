@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Raw datasets and raw Roboflow downloads: many GB, not practical for a normal git repo.
+# dataset/ is rebuilt from backup/ by dataset_structuring/01 and 02 (see root README.md).
+# Get both from the shared Drive link in AI_Implementation_Plan.md / ask the team.
+dataset/
+backup/
+
+# Training resume checkpoints: only needed to continue an interrupted training run.
+# best.pt (the actual deliverable each run produces) IS tracked.
+training/runs/**/last.pt
+
+# Ultralytics' raw per-batch diagnostic image dumps: useful once as a sanity check, not after.
+# The report-relevant outputs (confusion_matrix*.png, results.png/csv, the PR/F1 curves, labels.jpg)
+# from the same runs ARE tracked.
+training/runs/yolo26/*/train_batch*.jpg
+training/runs/yolo26/*/val_batch*_labels.jpg
+training/runs/yolo26/*/val_batch*_pred.jpg
+
+# Runtime state written by pipeline/aggregator.py: regenerated fresh by whoever runs it,
+# not shared project state.
+violations.db
+violations/evidence/
+violations/uploads/
+
+# OS junk
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Claude Code local session state -- not shared project config.
+.claude/

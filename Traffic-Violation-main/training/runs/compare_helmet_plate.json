@@ -1,0 +1,16 @@
+{
+  "task": "helmet_plate",
+  "split": "test",
+  "images": 2678,
+  "device": "cuda:0",
+  "option_b": {
+    "mAP50": 0.8598,
+    "mAP50_95": 0.5696,
+    "recall_100": 0.6515
+  },
+  "yolo26": {
+    "mAP50": 0.9454,
+    "mAP50_95": 0.7072,
+    "recall_100": 0.7574
+  }
+}

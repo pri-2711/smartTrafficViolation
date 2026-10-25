@@ -1,0 +1,15 @@
+{
+  "task": "helmet_plate",
+  "best_epoch": 46,
+  "val": {
+    "mAP50": 0.8712,
+    "mAP50_95": 0.5846,
+    "recall_100": 0.668
+  },
+  "test": {
+    "mAP50": 0.8598,
+    "mAP50_95": 0.5696,
+    "recall_100": 0.6515
+  },
+  "test_images": 2678
+}
